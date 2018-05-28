@@ -28,12 +28,16 @@ namespace SolutionRenamer
             Console.WriteLine();
             Console.WriteLine("Input your company name:");
             var oldCompanyName = Console.ReadLine();
+            if (string.IsNullOrEmpty(oldCompanyName))
+            {
+                oldCompanyName = "AbpCompanyName";
+            }
 
             Console.WriteLine("Input your peoject name(AbpZeroTemplate):");
             var oldPeojectName = Console.ReadLine();
             if (string.IsNullOrEmpty(oldPeojectName))
             {
-                oldPeojectName = "AbpZeroTemplate";
+                oldPeojectName = "AbpProjectName";
             }
 
             Console.WriteLine("Input your new company name:");
